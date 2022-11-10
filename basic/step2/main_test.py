@@ -11,7 +11,7 @@ class TestCase(unittest.TestCase):
         with redirect_stdout(io):
             main.main()
         self.assertRegex(
-            io.getvalue(), r'[hH][eE][lL][lL][oO][,\s]*[wW][oO][rR][lL][dD][!]*\n*')
+            io.getvalue(), r'37\n*')
 
 if __name__ == '__main__':
     unittest.main()
