@@ -3,6 +3,5 @@
 
 def main():
    #ここに書いてね
-
 if __name__ == '__main__':
    main()
