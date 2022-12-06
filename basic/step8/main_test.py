@@ -1,19 +1,16 @@
 import unittest
-from io import StringIO
-from contextlib import redirect_stdout
-
-import main
+import subprocess
 
 
 class TestCase(unittest.TestCase):
     def test_main(self):
         pass
+
     def test_welcom(self):
-        io = StringIO()
-        with redirect_stdout(io):
-            main.main()
+        ret = subprocess.run(["python3", "main.py"],
+                             capture_output=True, text=True)
         self.assertRegex(
-            io.getvalue(), r'ようこそhogeさん\n*')
+            ret.stdout, r'ようこそhogeさん\n*')
 
 
 if __name__ == '__main__':
