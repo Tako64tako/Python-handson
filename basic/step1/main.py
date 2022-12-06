@@ -2,6 +2,7 @@
 # Hello,World!と出力させるコードを以下に書いてください
 
 def main():
-   #ここに書いてね
+    # ここに書いてね
+
 if __name__ == '__main__':
-   main()
+    main()

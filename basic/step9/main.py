@@ -5,10 +5,12 @@ class Player:
     def attack(self, enemy):
         print("勇者は" + enemy + "を攻撃した")
 
+
 def main():
     ## TODO: Playerクラスのインスタンスを作成してください
     walk()
     attack("スライム")
+
 
 if __name__ == '__main__':
     main()

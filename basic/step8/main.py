@@ -8,6 +8,7 @@ def welcom(u):
     u['age'] = u['age'] + 1
     print('あなたは来年{}歳になりますね'.format(u['age']))
 
+
 def main():
     username = "hoge"
     userage = 20
