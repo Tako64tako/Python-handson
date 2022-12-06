@@ -1,21 +1,18 @@
 import unittest
-from io import StringIO
-from contextlib import redirect_stdout
+import subprocess
 
-import main
+min = "20"
+max = "25"
 
 
 class TestCase(unittest.TestCase):
     def test_main(self):
-        io = StringIO()
-        with redirect_stdout(io):
-            main.main()
-        bmi = io.getvalue()
-        flag = main.main()
-
-        if bmi > "20" and bmi < "25" and flag == True:
+        ret = subprocess.run(["python3", "main.py"],
+                             capture_output=True, text=True)
+        bmi = ret.stdout
+        if bmi > min and bmi < max:
             self.assertTrue(True)
-        elif bmi < "20" and bmi > "25" and flag == False:
+        elif bmi < min and bmi > max:
             self.assertFalse(True)
         else:
             self.assertTrue(False)
