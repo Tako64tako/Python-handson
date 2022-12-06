@@ -1,5 +1,6 @@
 # Step5
 # 変数bmiから20より大きい,25より小さいbmiを表示するプログラムを作成してください.
+# 条件を満たしている場合は'OK'を,満たしていない場合は'NG'を表示してください.
 
 
 min = 20
@@ -12,7 +13,6 @@ def main():
     # heightとwidthは適宜変更してね
 
     # ここに書いてね
-    print(width/(height*height))
 
 
 if __name__ == '__main__':
