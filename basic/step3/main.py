@@ -6,7 +6,9 @@ def main():
     height = 1.7
     width = 60
     # ここに書いてね
-    bmi = ""
-    print("")
+    bmi = ''
+    print(bmi)
+
+
 if __name__ == '__main__':
     main()
