@@ -3,9 +3,9 @@
 ## Introduction
 /basic Pythonの基本文法
 
-[WIP]/api   Pythonで作るapiサーバ
+/api   Pythonで作るapiサーバ
 
-[WIP]/database Pythonでデータベースの操作
+/database Pythonでデータベースの操作
 
 [WIP]/web PythonでWebスクレイピング
 
