@@ -7,7 +7,11 @@
 
 /database Pythonでデータベースの操作
 
-[WIP]/web PythonでWebスクレイピング
+/image_processing Pythonで画像処理
+
+/web PythonでWebスクレイピング
+
+/advanced api+databaseの応用編　新規登録・ログイン機能
 
 ## Enviroment
 | Tool | Version |
