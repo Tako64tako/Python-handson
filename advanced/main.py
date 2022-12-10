@@ -1,13 +1,38 @@
+import mysql.connector
 from flask import Flask
 from flask import render_template, request, redirect, url_for, session, flash
 
 import os
-import db
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
 
-database = db.connector()
+
+def get_user(username, password):
+    arr = []
+    # TODO: データベースからユーザー情報を取得する
+    conn = mysql.connector.connect(
+        user='root',
+        password='',
+        host='localhost',
+        port='3306',
+        database='flask'
+    )
+    return arr
+
+
+def add_user(username, password):
+    # TODO: データベースにユーザー情報を追加する
+    conn = mysql.connector.connect(
+        user='root',
+        password='',
+        host='localhost',
+        port='3306',
+        database='flask'
+    )
+
+####ここまでがデータベースの処理####
+####ここからFlaskの処理####
 
 
 @app.route('/')
@@ -29,10 +54,13 @@ def login():
 @app.route('/login', methods=['POST'])
 # TODO:ログイン処理を行う
 def login_post():
-    if session["flag"]:
-        return render_template('index.html', username=session["username"])
+
+    if :  # ログイン成功の時
+        session["username"] = request.form['username']
+        return redirect("/")
     else:
-        return render_template('login.html')
+        flash("ログインに失敗しました")
+        return redirect("/login")
 
 
 @app.route('/signup')
@@ -43,7 +71,8 @@ def signup():
 @app.route('/signup', methods=['POST'])
 def signup_post():
     # TODO:ユーザの登録処理を行う
-    return render_template('index.html', username=session["username"])
+    flash("ユーザー登録が完了しました")
+    return render_template('login.html')
 
 
 @app.route('/logout')
@@ -52,6 +81,7 @@ def logout():
     session.pop("username", None)
     session["flag"] = False
     session["username"] = None
+    flash("ログアウトしました")
 
     return redirect("/login")
 
