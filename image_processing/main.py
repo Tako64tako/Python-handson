@@ -43,3 +43,5 @@ if __name__ == '__main__':
     grayscale()
     face_detect()
     mosaic()
+
+    print("All functions are completed.")
