@@ -18,4 +18,4 @@ Step8. Use Function
 Step9. Use Class
 
 ## Test
-あとでかく
+各stepのtodoができたと思ったら```main_test```を実行してください
